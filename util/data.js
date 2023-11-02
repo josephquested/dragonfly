@@ -9,7 +9,7 @@ export function save (thing, stuff) {
 
 export function add (thing, stuff) {
     const data = localStorage.getItem(thing)
-    let _data = data ? { ...stuff, ...JSON.parse(data) } : stuff
+    let _data = data ? { ...JSON.parse(data), ...stuff } : stuff
     try {
         localStorage.setItem(thing, JSON.stringify(_data))
         console.log(`${thing} updated sucessfully`)
