@@ -8,12 +8,10 @@ function render () {
     
     app.innerHTML = `
         ${Header({ title: 'dragonfly.net' })}
-        ${NewGameButton()}
     `
 }
 
 render()
-
 
 // db examples 
 // data.add('users', {"Jello" : "Hello"})
